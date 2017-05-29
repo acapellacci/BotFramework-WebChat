@@ -35,6 +35,15 @@ module.exports = {
             { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
             // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
             { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
+            // charging images and other
+            {
+                test: /\.(gif|jpe?g|png|ico)$/,
+                loader: 'url-loader?limit=10000'
+            },
+            {
+                test: /\.(otf|eot|svg|ttf|woff|woff2).*$/,
+                loader: 'url-loader?limit=10000'
+      }
         ]
     },
 

@@ -425,7 +425,8 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
   float: left;
   margin-left: 8px; }
   .wc-message-from-bot:before {
-    content: "A"; }
+    content: "A";
+    background: url("http://webchatcarabinieri.azurewebsites.net/media/virtual_assistant_carabinieri.jpg"); }
 
 .wc-message-from-bot .wc-message-content {
   background-color: #eceff1;
