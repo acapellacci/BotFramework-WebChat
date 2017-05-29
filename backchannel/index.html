@@ -43,6 +43,74 @@ For ease of testing, several parameters can be set in the query string:
     position: absolute;
     left: 338px;
 }
+
+
+body {
+    margin:0;
+}
+
+@font-face {
+    font-family: OpenSanslLight;
+    src: url(font/OpenSans-Light.ttf);
+}
+
+@font-face {
+    font-family: BebasNeue;
+    src: url(font/BebasNeue Book.otf);
+}
+
+#container {
+    height:100vh;
+    width:446px;
+    background-color:#E0DEDF;
+    float:right;
+    margin-right: 150px;
+}
+
+#input {
+    width:446px;
+    height:75px;
+    background-color:#CCCCCC;
+    position:absolute;
+    bottom:0;
+    overflow: auto;
+    display:inline-block;
+}
+
+input[type=text]{
+    border-radius: 10px;
+    background-color: #EDEDED;
+    height: 50px;
+    width: 335px;
+
+
+    border:none;
+    padding-left: 10px;
+    -moz-user-focus: none;
+}
+
+input:focus {
+    outline:none;
+}
+.button {
+    position:relative;
+    left:20px;
+    top:4px;
+    font-family: BebasNeue;
+    font-weight: 100;
+    font-size: 25px;
+    color:#0A1A54;
+    text-transform: uppercase;
+    display:inline-block;
+    cursor:pointer;
+}
+
+input[placeholder], [placeholder], *[placeholder] {
+    font-family: OpenSanslLight;
+    text-align: left;
+    font-size: 16px;
+    color:#454545;
+}
 	</style>
 </head>
 

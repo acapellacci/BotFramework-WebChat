@@ -19,12 +19,7 @@ $actionTransition: .2s cubic-bezier(0,0,.5,1);
         font-size: 15px;
     }
 
-.wc-basket-panel {
-    width: 100px;
-    height: 500px;
-    position: relative;
-    left:320px
-}
+
 
     .wc-app button {
         background-color: $c06;
@@ -83,6 +78,7 @@ $actionTransition: .2s cubic-bezier(0,0,.5,1);
         right: 0;
         top: $headerTotalHeight;
         transition: transform $actionTransition;
+        background-color: $c09;
     }
 
     .wc-message-group-content {
