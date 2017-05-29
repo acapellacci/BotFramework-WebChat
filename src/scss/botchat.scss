@@ -19,6 +19,13 @@ $actionTransition: .2s cubic-bezier(0,0,.5,1);
         font-size: 15px;
     }
 
+.wc-basket-panel {
+    width: 100px;
+    height: 500px;
+    position: relative;
+    left:320px
+}
+
     .wc-app button {
         background-color: $c06;
         border: 1px solid $c05;
@@ -190,6 +197,19 @@ $actionTransition: .2s cubic-bezier(0,0,.5,1);
         left: 0;
         top: 0;
         bottom: 0;
+    }
+
+    .wc-chatview-video {
+        height: 0;
+        background: blue ;
+        animation-name: wc-chatview-video-animation;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    }
+    @keyframes wc-chatview-video-animation {
+        from {height: 0;}
+        to {height: 50%;}
+
     }
 
 /* messages */

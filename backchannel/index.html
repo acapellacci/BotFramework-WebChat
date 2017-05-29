@@ -37,16 +37,26 @@ For ease of testing, several parameters can be set in the query string:
         .h2{
             font-family: Segoe UI;
         }
+.wc-basket-panel {
+    width: 100px;
+    top: 429px;
+    position: absolute;
+    left: 338px;
+}
 	</style>
 </head>
 
 <body>
-<div>
-    <h1>pippo</h1>
-</div>
-	<div id="BotChatGoesHere" class="wc-narrow"></div>
 
-	<script src="../../botchat.js"></script>
+
+    <div id="BotChatGoesHere" class="wc-narrow"></div>
+
+    <div id="basketCol" class="wc-basket-panel">
+        <img src="img/basket.png" alt="basket">
+    </div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
+    <script src="../../botchat.js"></script>
 	<script>
             var params = BotChat.queryParams(location.search);
 
@@ -82,7 +92,36 @@ For ease of testing, several parameters can be set in the query string:
             const changeBackgroundColor = (newColor) => {
                 document.body.style.backgroundColor = newColor;
             }
+
+            botConnection.activity$
+                .filter(activity => activity.type === "event" && activity.name === "AvatarReminder")
+                .subscribe(activity => AvatarReminder(activity.value))
+
+            const AvatarReminder = (AvatarReminder) => {
+                //Velocity(document.getElementById("dummy"), { opacity: 0.5 }, { duration: 1000 });
+            }
+
+            botConnection.activity$
+                .filter(activity => activity.type === "event" && activity.name === "AvatarPresentation")
+                .subscribe(activity => AvatarPresentation(activity.value))
+
+            const AvatarPresentation = (AvatarPresentation) => {
+                //Velocity(document.getElementsByClassName("wc-chatview-video"), { heigth: 50% }, { duration: 500 });
+            }
+
+
+
+
+
+            /* lista eventi
+            * apertura della pagina -> paertura tendna e primo video
+            * AvatarReminder -> quell'immagine col video annesso
+            * AvatarPresentation -> apre tendona e avvia video
+
+            Velocity(document.getElementById("dummy"), { opacity: 0.5 }, { duration: 1000 });
+            */
         </script>
 </body>
 
 </html>
+

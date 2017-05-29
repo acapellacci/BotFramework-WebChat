@@ -164,11 +164,11 @@ export class Chat extends React.Component<ChatProps, {}> {
         konsole.log("BotChat.Chat state", state);
 
         // only render real stuff after we know our dimensions
-        /*let header: JSX.Element;
+        let header: JSX.Element;
         if (state.format.options.showHeader) header =
             <div className="wc-header">
                 <span>{ state.format.strings.title }</span>
-            </div>;*/
+            </div>;
 
         let resize: JSX.Element;
         if (this.props.resize === 'detect') resize =
@@ -177,7 +177,8 @@ export class Chat extends React.Component<ChatProps, {}> {
         return (
             <Provider store={ this.store }>
                 <div className="wc-chatview-panel" ref={ div => this.chatviewPanel = div }>
-                    {/*{ header }*/}
+                    <div className="wc-chatview-video "></div>
+
                     <MessagePane setFocus={ () => this.setFocus() }>
                         <History setFocus={ () => this.setFocus() }/>
                     </MessagePane>

@@ -3,6 +3,12 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
   font-family: 'Segoe UI', sans-serif;
   font-size: 15px; }
 
+.wc-basket-panel {
+  width: 100px;
+  height: 500px;
+  position: relative;
+  left: 320px; }
+
 .wc-app button {
   background-color: #0063b1;
   border: 1px solid #ccc;
@@ -134,6 +140,19 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
   left: 0;
   top: 0;
   bottom: 0; }
+
+.wc-chatview-video {
+  height: 0;
+  background: blue;
+  animation-name: wc-chatview-video-animation;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1; }
+
+@keyframes wc-chatview-video-animation {
+  from {
+    height: 0; }
+  to {
+    height: 50%; } }
 
 /* messages */
 .wc-message-wrapper {

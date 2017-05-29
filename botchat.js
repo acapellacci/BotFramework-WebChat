@@ -2802,17 +2802,18 @@ var Chat = (function (_super) {
         var state = this.store.getState();
         exports.konsole.log("BotChat.Chat state", state);
         // only render real stuff after we know our dimensions
-        /*let header: JSX.Element;
-        if (state.format.options.showHeader) header =
-            <div className="wc-header">
-                <span>{ state.format.strings.title }</span>
-            </div>;*/
+        var header;
+        if (state.format.options.showHeader)
+            header =
+                React.createElement("div", { className: "wc-header" },
+                    React.createElement("span", null, state.format.strings.title));
         var resize;
         if (this.props.resize === 'detect')
             resize =
                 React.createElement(ResizeDetector, { onresize: this.resizeListener });
         return (React.createElement(react_redux_1.Provider, { store: this.store },
             React.createElement("div", { className: "wc-chatview-panel", ref: function (div) { return _this.chatviewPanel = div; } },
+                React.createElement("div", { className: "wc-chatview-video " }),
                 React.createElement(MessagePane_1.MessagePane, { setFocus: function () { return _this.setFocus(); } },
                     React.createElement(History_1.History, { setFocus: function () { return _this.setFocus(); } })),
                 React.createElement(Shell_1.Shell, null),
