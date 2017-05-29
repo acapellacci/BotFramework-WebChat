@@ -443,6 +443,9 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
 
 /* console */
 .wc-console > * {
+  border-radius: 15px; }
+
+.wc-console > * {
   position: absolute;
   top: 0;
   vertical-align: middle; }

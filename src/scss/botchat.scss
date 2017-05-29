@@ -581,11 +581,15 @@ $actionTransition: .2s cubic-bezier(0,0,.5,1);
     }
 
 /* console */
+.wc-console > * {
+    border-radius: 15px;
+}
 
     .wc-console > * {
         position: absolute;
         top: 0;
         vertical-align: middle;
+
     }
 
     .wc-console label {
