@@ -49,14 +49,14 @@ class ShellContainer extends React.Component<Props, {}> {
         if (this.props.inputText.length > 0) className += ' has-text';
 
         return (
-            <div className="wc-console-background">
-                <div className={className}>
+            <div className={className}>
+                {/*<div className="wc-console-interior">*/}
                     <input id="wc-upload-input" type="file" ref={ input => this.fileInput = input } multiple onChange={ () => this.onChangeFile() } />
-                    <label className="wc-upload" htmlFor="wc-upload-input">
-                        <p>
-                            SEND
-                        </p>
-                    </label>
+                    {/*<label className="wc-upload" htmlFor="wc-upload-input">
+                                            <p>
+                                                SEND
+                                            </p>
+                                        </label>*/}
                     <div className="wc-textbox">
                         <input
                             type="text"
@@ -71,10 +71,10 @@ class ShellContainer extends React.Component<Props, {}> {
                     </div>
                     <label className="wc-send" onClick={ () => this.onClickSend() } >
                         <p>
-                            SEND
+                            INVIA
                         </p>
                     </label>
-                </div>
+                {/*</div>*/}
             </div>
         );
     }

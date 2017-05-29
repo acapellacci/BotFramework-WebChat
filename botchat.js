@@ -2802,18 +2802,17 @@ var Chat = (function (_super) {
         var state = this.store.getState();
         exports.konsole.log("BotChat.Chat state", state);
         // only render real stuff after we know our dimensions
-        var header;
-        if (state.format.options.showHeader)
-            header =
-                React.createElement("div", { className: "wc-header" },
-                    React.createElement("span", null, state.format.strings.title));
+        /*let header: JSX.Element;
+        if (state.format.options.showHeader) header =
+            <div className="wc-header">
+                <span>{ state.format.strings.title }</span>
+            </div>;*/
         var resize;
         if (this.props.resize === 'detect')
             resize =
                 React.createElement(ResizeDetector, { onresize: this.resizeListener });
         return (React.createElement(react_redux_1.Provider, { store: this.store },
             React.createElement("div", { className: "wc-chatview-panel", ref: function (div) { return _this.chatviewPanel = div; } },
-                header,
                 React.createElement(MessagePane_1.MessagePane, { setFocus: function () { return _this.setFocus(); } },
                     React.createElement(History_1.History, { setFocus: function () { return _this.setFocus(); } })),
                 React.createElement(Shell_1.Shell, null),
@@ -16274,15 +16273,12 @@ var ShellContainer = (function (_super) {
         var className = 'wc-console';
         if (this.props.inputText.length > 0)
             className += ' has-text';
-        return (React.createElement("div", { className: "wc-console-background" },
-            React.createElement("div", { className: className },
-                React.createElement("input", { id: "wc-upload-input", type: "file", ref: function (input) { return _this.fileInput = input; }, multiple: true, onChange: function () { return _this.onChangeFile(); } }),
-                React.createElement("label", { className: "wc-upload", htmlFor: "wc-upload-input" },
-                    React.createElement("p", null, "SEND")),
-                React.createElement("div", { className: "wc-textbox" },
-                    React.createElement("input", { type: "text", className: "wc-shellinput", ref: function (input) { return _this.textInput = input; }, autoFocus: true, value: this.props.inputText, onChange: function (_) { return _this.props.onChangeText(_this.textInput.value); }, onKeyPress: function (e) { return _this.onKeyPress(e); }, placeholder: this.props.strings.consolePlaceholder })),
-                React.createElement("label", { className: "wc-send", onClick: function () { return _this.onClickSend(); } },
-                    React.createElement("p", null, "SEND")))));
+        return (React.createElement("div", { className: className },
+            React.createElement("input", { id: "wc-upload-input", type: "file", ref: function (input) { return _this.fileInput = input; }, multiple: true, onChange: function () { return _this.onChangeFile(); } }),
+            React.createElement("div", { className: "wc-textbox" },
+                React.createElement("input", { type: "text", className: "wc-shellinput", ref: function (input) { return _this.textInput = input; }, autoFocus: true, value: this.props.inputText, onChange: function (_) { return _this.props.onChangeText(_this.textInput.value); }, onKeyPress: function (e) { return _this.onKeyPress(e); }, placeholder: this.props.strings.consolePlaceholder })),
+            React.createElement("label", { className: "wc-send", onClick: function () { return _this.onClickSend(); } },
+                React.createElement("p", null, "INVIA"))));
     };
     return ShellContainer;
 }(React.Component));

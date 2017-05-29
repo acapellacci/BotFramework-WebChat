@@ -144,7 +144,7 @@ $actionTransition: .2s cubic-bezier(0,0,.5,1);
             background-color:  $c08;
         }
 
-        button.scroll svg {
+        button.scroll p {
             fill: $c01;
 
             //TODO: use proper svg coords in the path data
@@ -581,43 +581,55 @@ $actionTransition: .2s cubic-bezier(0,0,.5,1);
     }
 
 /* console */
-.wc-console > * {
+/*.wc-console-interior {
     border-radius: 15px;
-}
+        border: 5px solid #dbdee1;
+    bottom: 0;
+    box-sizing: border-box;
+    height: 50px;
+    left: 0;
+    position: absolute;
+    right: 0;
+}*/
 
-    .wc-console > * {
+    .wc-console /*.wc-console-interior*/ > * {
         position: absolute;
         top: 0;
         vertical-align: middle;
 
     }
 
-    .wc-console label {
+    .wc-console /*.wc-console-interior label*/ {
         cursor: pointer;
         display: inline-block;
         height: 40px;
+        background: #dbdee1;
     }
 
-    .wc-console svg {
-        fill: $c03;
-        margin: 11px;
+    .wc-console /*.wc-console-interior*/ p {
+        color: $c03;
+            margin-right: 11px;
+    margin-top: 5px;
     }
 
     .wc-console textarea, .wc-console input[type=text] {
-        border: none;
+        border: 1px solid #eceff1;
+        border-radius: 7px;
         height: 100%;
         outline: none;
         padding: 0;
         resize: none;
         width: 100%;
+
+
     }
 
-    .wc-send svg {
+    .wc-send p {
         height: 18px;
         width: 27px;
     }
 
-    .wc-upload svg {
+    .wc-upload p {
         height: 18px;
         width: 26px;
     }
@@ -628,16 +640,19 @@ $actionTransition: .2s cubic-bezier(0,0,.5,1);
 
     .wc-textbox {
         bottom: 0;
-        left: 48px;
+        //left: 48px;
+        left: 0;
         right: 49px;
+        border-radius: 15px;
+        border-color: $c03;
     }
 
     .wc-send {
         right: 0;
     }
 
-    .wc-console.has-text .wc-send svg {
-        fill: $c07;
+    .wc-console.has-text .wc-send p {
+        color: $c07;
     }
 
 /* animation */
