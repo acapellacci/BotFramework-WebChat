@@ -438,13 +438,19 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
 .wc-message-from-bot {
   float: left;
   margin-left: 8px; }
-  .wc-message-from-bot:before {
-    content: "A";
-    background: url("backchannel/img/avatar.png"); }
+  .wc-message-from-bot:first-child:before {
+    background-image: url("backchannel/img/avatar.png");
+    background-size: 40px 40px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    content: ""; }
 
 .wc-message-from-bot .wc-message-content {
   background-color: #eceff1;
-  color: #000; }
+  color: #000;
+  margin-left: 50px;
+  margin-top: -40px; }
 
 .wc-message-from-bot svg.wc-message-callout path {
   fill: #eceff1; }
@@ -453,7 +459,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
   display: none; }
 
 .wc-message-from-bot svg.wc-message-callout {
-  left: -6px; }
+  left: 40px; }
 
 /* console */
 /*.wc-console-interior {

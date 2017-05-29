@@ -572,10 +572,16 @@ $actionTransition: .2s cubic-bezier(0,0,.5,1);
     .wc-message-from-bot {
         float: left;
         margin-left: 8px;
-        &:before {
-            content:url("backchannel/img/avatar.png");
-            // background:url("http://webchatcarabinieri.azurewebsites.net/media/virtual_assistant_carabinieri.jpg");
-            scale:50%;
+        &:first-child {
+            &:before {
+                // background:url("http://webchatcarabinieri.azurewebsites.net/media/virtual_assistant_carabinieri.jpg");
+                background-image: url("backchannel/img/avatar.png");
+                background-size: 40px 40px;
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                content:"";
+            }
         }
     }
 
@@ -583,6 +589,8 @@ $actionTransition: .2s cubic-bezier(0,0,.5,1);
     .wc-message-from-bot .wc-message-content {
         background-color: $c_messageFromThem;
         color: $c00;
+            margin-left: 50px;
+    margin-top: -40px;
     }
 
     .wc-message-from-bot svg.wc-message-callout path {
@@ -594,7 +602,11 @@ $actionTransition: .2s cubic-bezier(0,0,.5,1);
     }
 
     .wc-message-from-bot svg.wc-message-callout {
-        left: -6px;
+        // left: -6px;
+        left: 40px;
+        // background-color: #d2dde5;
+        // box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+
     }
 
 /* console */
