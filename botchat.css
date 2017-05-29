@@ -440,7 +440,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
   margin-left: 8px; }
   .wc-message-from-bot:before {
     content: "A";
-    background: url("http://webchatcarabinieri.azurewebsites.net/media/virtual_assistant_carabinieri.jpg"); }
+    background: url("backchannel/img/avatar.png"); }
 
 .wc-message-from-bot .wc-message-content {
   background-color: #eceff1;
