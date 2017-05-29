@@ -200,94 +200,128 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
   margin-top: 5px; }
 
 /* cards */
+\
 .wc-card {
   background-color: #fff;
   font-size: 13px; }
-  .wc-card button {
+  \
+.wc-card button {
     background-color: transparent;
     color: #3a96dd;
     min-height: 32px;
     width: 100%;
     padding: 0 16px; }
-  .wc-card button:hover {
+  \
+.wc-card button:hover {
     background-color: transparent;
     border-color: #3a96dd;
     color: #3a96dd; }
-  .wc-card button:active {
+  \
+.wc-card button:active {
     background-color: #3a96dd;
     border-color: #3a96dd;
     color: #fff; }
-  .wc-card h1 {
+  \
+.wc-card h1 {
     font-size: 15px;
     font-weight: 700; }
-  .wc-card h2 {
+  \
+.wc-card h2 {
     color: #808c95;
     font-size: inherit;
     font-weight: normal;
     margin-bottom: 8px; }
-  .wc-card p {
+  \
+.wc-card p {
     padding-bottom: 10px; }
-  .wc-card h1, .wc-card h2, .wc-card p {
+  \
+.wc-card h1, \
+.wc-card h2, \
+.wc-card p {
     margin-left: 8px;
     margin-right: 8px; }
-  .wc-card p h2 {
+  \
+.wc-card p h2 {
     /* don't double indent */
     margin-left: 0; }
-  .wc-card ul.wc-card-buttons {
+  \
+.wc-card ul.wc-card-buttons {
     clear: both;
     display: table; }
-  .wc-card ul.wc-card-buttons li {
+  \
+.wc-card ul.wc-card-buttons li {
     list-style-type: none;
     text-align: center;
     float: left;
     margin: 2px; }
-  .wc-card.hero img {
+  \
+.wc-card.hero img {
     display: block;
     margin-bottom: 11px; }
-  .wc-card.receipt table {
+  \
+.wc-card.receipt table {
     border-collapse: collapse;
     width: 100%; }
-  .wc-card.receipt th, .wc-card.receipt td {
+  \
+.wc-card.receipt th, \
+.wc-card.receipt td {
     text-align: right;
     vertical-align: top; }
-  .wc-card.receipt th:first-child, .wc-card.receipt td:first-child {
+  \
+.wc-card.receipt th:first-child, \
+.wc-card.receipt td:first-child {
     text-align: left; }
-  .wc-card.receipt th {
+  \
+.wc-card.receipt th {
     color: #808c95;
     font-size: inherit;
     font-weight: normal;
     line-height: 1.75; }
-  .wc-card.receipt thead tr:last-child th {
+  \
+.wc-card.receipt thead tr:last-child th {
     padding-bottom: 16px; }
-  .wc-card.receipt th[colspan="2"] {
+  \
+.wc-card.receipt th[colspan="2"] {
     color: inherit;
     font-size: 15px;
     font-weight: 700; }
-  .wc-card.receipt td {
+  \
+.wc-card.receipt td {
     padding: 4px 8px 0 8px; }
-  .wc-card.receipt td img {
+  \
+.wc-card.receipt td img {
     float: left;
     margin: 5px 8px 8px 0;
     max-height: 50px;
     max-width: 50px; }
-  .wc-card.receipt div.title {
+  \
+.wc-card.receipt div.title {
     font-weight: bolder; }
-  .wc-card.receipt div.subtitle {
+  \
+.wc-card.receipt div.subtitle {
     font-weight: lighter; }
-  .wc-card.receipt tbody tr, .wc-card.receipt tfoot tr {
+  \
+.wc-card.receipt tbody tr, \
+.wc-card.receipt tfoot tr {
     border-top: 1px solid #d2dde5; }
-  .wc-card.receipt tbody tr:first-child, .wc-card.receipt tfoot tr:first-child {
+  \
+.wc-card.receipt tbody tr:first-child, \
+.wc-card.receipt tfoot tr:first-child {
     border-top-width: 2px; }
-  .wc-card.receipt tfoot td {
+  \
+.wc-card.receipt tfoot td {
     line-height: 2.25; }
-  .wc-card.receipt tfoot .total {
+  \
+.wc-card.receipt tfoot .total {
     font-weight: bold; }
-  .wc-card.thumbnail img {
+  \
+.wc-card.thumbnail img {
     float: right;
     margin-bottom: 10px;
     margin-left: 10px;
     width: 100px; }
-  .wc-card.signin h1 {
+  \
+.wc-card.signin h1 {
     margin: 10px 24px 16px 14px; }
 
 /* alternate chat sizes */
@@ -390,6 +424,8 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
 .wc-message-from-bot {
   float: left;
   margin-left: 8px; }
+  .wc-message-from-bot:before {
+    content: "A"; }
 
 .wc-message-from-bot .wc-message-content {
   background-color: #eceff1;

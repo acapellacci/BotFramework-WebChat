@@ -135,7 +135,7 @@ $actionTransition: .2s cubic-bezier(0,0,.5,1);
             top: 0;
             width: 28px;
         }
-        
+
         button.scroll:disabled {
             display: none;
         }
@@ -273,7 +273,7 @@ $actionTransition: .2s cubic-bezier(0,0,.5,1);
         margin-top: 5px;
     }
 
-/* cards */
+/* cards */\
 
     .wc-card {
 
@@ -556,7 +556,12 @@ $actionTransition: .2s cubic-bezier(0,0,.5,1);
     .wc-message-from-bot {
         float: left;
         margin-left: 8px;
+        &:before {
+            content:"A";
+            //background:url("http://webchatcarabinieri.azurewebsites.net/media/virtual_assistant_carabinieri.jpg");
+        }
     }
+
 
     .wc-message-from-bot .wc-message-content {
         background-color: $c_messageFromThem;
