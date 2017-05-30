@@ -76,7 +76,7 @@ $actionTransition: .2s cubic-bezier(0,0,.5,1);
         padding: 10px;
         position: absolute;
         right: 0;
-        top: $headerTotalHeight;
+        // top: $headerTotalHeight;
         transition: transform $actionTransition;
         background-color: $c09;
     }
