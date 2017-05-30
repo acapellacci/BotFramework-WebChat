@@ -64,6 +64,8 @@ For ease of testing, several parameters can be set in the query string:
     top: -40%;
 left: 50%;
 transform: translate(-50%, 0%) scale(0.5, 0.5);
+opacity: 0.3;
+
 }
 .wc-chatview-video .overlay {
     height: 100%;
@@ -73,7 +75,7 @@ transform: translate(-50%, 0%) scale(0.5, 0.5);
     left: 0px;
     z-index: 2;
     /* background: green; */
-    opacity: 0.5;
+    /* opacity: 0.5; */
 }
 
 body {
@@ -156,6 +158,9 @@ input[placeholder], [placeholder], *[placeholder] {
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
     <script src="../../botchat.js"></script>
+
+
+
 	<script>
             var params = BotChat.queryParams(location.search);
 
@@ -198,15 +203,11 @@ input[placeholder], [placeholder], *[placeholder] {
 
             const AvatarReminder = (AvatarReminder) => {
                 //Velocity(document.getElementById("dummy"), { opacity: 0.5 }, { duration: 1000 });
+
             }
 
-            botConnection.activity$
-                .filter(activity => activity.type === "event" && activity.name === "AvatarPresentation")
-                .subscribe(activity => AvatarPresentation(activity.value))
 
-            const AvatarPresentation = (AvatarPresentation) => {
-                //Velocity(document.getElementsByClassName("wc-chatview-video"), { heigth: 50% }, { duration: 500 });
-            }
+
 
 
 
@@ -220,6 +221,23 @@ input[placeholder], [placeholder], *[placeholder] {
             Velocity(document.getElementById("dummy"), { opacity: 0.5 }, { duration: 1000 });
             */
         </script>
+            <script type='text/javascript'>
+        document.getElementById('apertura').addEventListener('ended',chiudiVideo,false);
+        function chiudiVideo(e) {
+            console.log(e);
+
+
+                botConnection
+                    .postActivity({type: "event", value: "", from: {id: "me" }, name: "AvatarApertura"})
+                    .subscribe(id => console.log("success"));
+
+
+
+            var itemDiv = document.getElementById("apertura");
+            itemDiv.style.display = 'none';
+
+        }
+    </script>
 </body>
 
 </html>
