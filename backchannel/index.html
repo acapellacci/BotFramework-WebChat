@@ -31,9 +31,11 @@ For ease of testing, several parameters can be set in the query string:
 	<style>
 		.wc-chatview-panel {
             /* width: 320px; */
-			width: 222px;
+            /* width: 222px; */
+			width: 333px;
             /* height: 500px; */
-			height: 522px;
+            /* height: 522px; */
+			height: 633px;
 			position: relative;
 		}
         .h2{
@@ -41,9 +43,11 @@ For ease of testing, several parameters can be set in the query string:
         }
 .wc-basket-panel {
     width: 100px;
-    top: 429px;
+    /* top: 429px; */
+    top: 555px;
     position: absolute;
-    left: 240px;
+    /* left: 240px; */
+    left: 350px;
 }
 
 
@@ -63,10 +67,11 @@ For ease of testing, several parameters can be set in the query string:
     position: absolute;
     z-index: 1;
     object-fit: cover;
-    top: -40%;
+    /* top: -40%; */
+        top: -30%;
 left: 50%;
-transform: translate(-50%, 0%) scale(0.5, 0.5);
-opacity: 0.3;
+/* transform: translate(-50%, 0%) scale(0.5, 0.5); */
+transform: translate(-50%, 0%) scale(0.8, 0.8);
 
 }
 .wc-chatview-video .overlay {
@@ -200,7 +205,7 @@ input[placeholder], [placeholder], *[placeholder] {
                 //Velocity(document.getElementById("dummy"), { opacity: 0.5 }, { duration: 1000 });
                 var itemDiv = document.getElementById('apertura')
                 itemDiv.src = "/backchannel/img/reminder.mp4";
-                itemDiv.style.display="inline";
+                itemDiv.style.zIndex ="1";
 
             }
 
@@ -232,7 +237,7 @@ input[placeholder], [placeholder], *[placeholder] {
 
 
             var itemDiv = document.getElementById("apertura");
-            itemDiv.style.z-index= "-10";
+            itemDiv.style.zIndex ="-10";
 
 
         }

@@ -131,7 +131,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
   overflow: hidden;
   position: absolute;
   right: 0;
-  left: 0;
+  left: 10px;
   top: 0;
   bottom: 0; }
 
