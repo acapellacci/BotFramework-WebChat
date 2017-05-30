@@ -590,7 +590,8 @@ $actionTransition: .2s cubic-bezier(0,0,.5,1);
 
 
     .wc-message-from-bot .wc-message-content {
-        background-color: $c_messageFromThem;
+        // background-color: $c_messageFromThem;
+        background-color: $c10;
         color: $c00;
             margin-left: 50px;
     margin-top: -40px;

@@ -446,7 +446,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
     content: ""; }
 
 .wc-message-from-bot .wc-message-content {
-  background-color: #E0DEDF;
+  background-color: #CCCCCC;
   color: #000;
   margin-left: 50px;
   margin-top: -40px; }
