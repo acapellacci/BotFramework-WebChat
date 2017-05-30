@@ -189,16 +189,9 @@ input[placeholder], [placeholder], *[placeholder] {
                 bot: bot
             }, document.getElementById("BotChatGoesHere"));
 
-            botConnection.activity$
-                .filter(activity => activity.type === "event" && activity.name === "changeBackground")
-                .subscribe(activity => changeBackgroundColor(activity.value))
-
-            const changeBackgroundColor = (newColor) => {
-                document.body.style.backgroundColor = newColor;
-            }
 
             botConnection.activity$
-                .filter(activity => activity.type === "event" && activity.name === "AvatarReminder")
+                .filter(activity => activity.type === "event" && activity.name === "showAvatar" && activity.value=="AvatarReminder")
                 .subscribe(activity => AvatarReminder(activity.value))
 
             const AvatarReminder = (AvatarReminder) => {
@@ -231,13 +224,13 @@ input[placeholder], [placeholder], *[placeholder] {
 
 
                 botConnection
-                    .postActivity({type: "event", value: "", from: {id: "me" }, name: "AvatarApertura"})
+                    .postActivity({type: "event", value: "AvatarApertura", from: {id: "me" }, name: "showAvatar"})
                     .subscribe(id => console.log("success"));
 
 
 
             var itemDiv = document.getElementById("apertura");
-            itemDiv.style.display = 'none';
+            itemDiv.style.z-index= "-10";
 
 
         }
