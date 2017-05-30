@@ -183,7 +183,7 @@ export class Chat extends React.Component<ChatProps, {}> {
                             {/*<source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm" type="video/webm"></source>*/}
                             <source src="http://webchatcarabinieri.azurewebsites.net/media/apertura.mp4" type="video/mp4"></source>
                             {/*<source src="/backchannel/img/Chatbot_WELCOME_002.mp4" type="video/mp4"></source>*/}
-                            <source src="/backchannel/img/reminder.mp4" type="video/mp4"></source>
+                            <source src="/backchannel/img/apertura.mp4" type="video/mp4"></source>
                         </video>
                     </div>
 

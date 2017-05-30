@@ -125,7 +125,7 @@ var Chat = (function (_super) {
                     React.createElement("div", { className: "overlay" }),
                     React.createElement("video", { id: "apertura", autoPlay: true },
                         React.createElement("source", { src: "http://webchatcarabinieri.azurewebsites.net/media/apertura.mp4", type: "video/mp4" }),
-                        React.createElement("source", { src: "/backchannel/img/Chatbot_WELCOME_002.mp4", type: "video/mp4" }))),
+                        React.createElement("source", { src: "/backchannel/img/apertura.mp4", type: "video/mp4" }))),
                 React.createElement(MessagePane_1.MessagePane, { setFocus: function () { return _this.setFocus(); } },
                     React.createElement(History_1.History, { setFocus: function () { return _this.setFocus(); } })),
                 React.createElement(Shell_1.Shell, null),
