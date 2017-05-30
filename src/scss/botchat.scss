@@ -177,7 +177,8 @@ $actionTransition: .2s cubic-bezier(0,0,.5,1);
 
     .wc-console {
         border: 5px solid $c_chrome;
-        bottom: 0;
+        // bottom: 0;
+            bottom: 10px;
         box-sizing: border-box;
         height: $consoleHeight;
         left: 0;
