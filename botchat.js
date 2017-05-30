@@ -2813,7 +2813,11 @@ var Chat = (function (_super) {
                 React.createElement(ResizeDetector, { onresize: this.resizeListener });
         return (React.createElement(react_redux_1.Provider, { store: this.store },
             React.createElement("div", { className: "wc-chatview-panel", ref: function (div) { return _this.chatviewPanel = div; } },
-                React.createElement("div", { className: "wc-chatview-video " }),
+                React.createElement("div", { className: "wc-chatview-video" },
+                    React.createElement("div", { className: "overlay" }),
+                    React.createElement("video", { autoPlay: true },
+                        React.createElement("source", { src: "http://webchatcarabinieri.azurewebsites.net/media/apertura.mp4", type: "video/mp4" }),
+                        React.createElement("source", { src: "/backchannel/img/Chatbot_WELCOME_002.mp4", type: "video/mp4" }))),
                 React.createElement(MessagePane_1.MessagePane, { setFocus: function () { return _this.setFocus(); } },
                     React.createElement(History_1.History, { setFocus: function () { return _this.setFocus(); } })),
                 React.createElement(Shell_1.Shell, null),

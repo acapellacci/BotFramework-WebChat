@@ -1,6 +1,5 @@
 /* reset */
 body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
-  font-family: 'Segoe UI', sans-serif;
   font-size: 15px; }
 
 .wc-app button {
@@ -53,7 +52,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
   right: 0;
   top: 38px;
   transition: transform 0.2s cubic-bezier(0, 0, 0.5, 1);
-  background-color: #eceff1; }
+  background-color: #E0DEDF; }
 
 .wc-message-group-content {
   overflow: hidden; }
@@ -119,7 +118,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
   height: 40px; }
 
 .wc-console {
-  border: 5px solid #dbdee1;
+  border: 5px solid #CCCCCC;
   bottom: 0;
   box-sizing: border-box;
   height: 50px;
@@ -138,7 +137,6 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
 
 .wc-chatview-video {
   height: 0;
-  background: blue;
   animation-name: wc-chatview-video-animation;
   animation-duration: 0.5s;
   animation-iteration-count: 1; }
@@ -186,7 +184,8 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
   border-radius: 2px;
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
   padding: 8px;
-  word-break: break-word; }
+  word-break: break-word;
+  font-family: OpenSanslLight; }
 
 .wc-message-content.clickable {
   cursor: pointer; }
@@ -447,13 +446,13 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
     content: ""; }
 
 .wc-message-from-bot .wc-message-content {
-  background-color: #eceff1;
+  background-color: #E0DEDF;
   color: #000;
   margin-left: 50px;
   margin-top: -40px; }
 
 .wc-message-from-bot svg.wc-message-callout path {
-  fill: #eceff1; }
+  fill: #E0DEDF; }
 
 .wc-message-from-bot svg.wc-message-callout path.point-right {
   display: none; }
@@ -464,7 +463,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
 /* console */
 /*.wc-console-interior {
     border-radius: 15px;
-        border: 5px solid #dbdee1;
+        border: 5px solid $c10;
     bottom: 0;
     box-sizing: border-box;
     height: 50px;
@@ -481,7 +480,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
   cursor: pointer;
   display: inline-block;
   height: 40px;
-  background: #dbdee1; }
+  background: #CCCCCC; }
 
 .wc-console p {
   color: #8a8a8a;
@@ -489,13 +488,15 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
   margin-top: 5px; }
 
 .wc-console textarea, .wc-console input[type=text] {
-  border: 1px solid #eceff1;
+  border: 1px solid #E0DEDF;
   border-radius: 7px;
   height: 100%;
   outline: none;
   padding: 0;
   resize: none;
-  width: 100%; }
+  width: 100%;
+  font-family: OpenSanslLight;
+  color: #454545; }
 
 .wc-send p {
   height: 18px;
@@ -568,4 +569,4 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
   background-color: transparent; }
 
 .wc-app ::-webkit-scrollbar-thumb {
-  background-color: #dbdee1; }
+  background-color: #CCCCCC; }

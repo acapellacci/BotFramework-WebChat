@@ -177,7 +177,14 @@ export class Chat extends React.Component<ChatProps, {}> {
         return (
             <Provider store={ this.store }>
                 <div className="wc-chatview-panel" ref={ div => this.chatviewPanel = div }>
-                    <div className="wc-chatview-video "></div>
+                    <div className="wc-chatview-video">
+                        <div className="overlay"></div>
+                        <video autoPlay>
+                            {/*<source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm" type="video/webm"></source>*/}
+                            <source src="http://webchatcarabinieri.azurewebsites.net/media/apertura.mp4" type="video/mp4"></source>
+                            <source src="/backchannel/img/Chatbot_WELCOME_002.mp4" type="video/mp4"></source>
+                        </video>
+                    </div>
 
                     <MessagePane setFocus={ () => this.setFocus() }>
                         <History setFocus={ () => this.setFocus() }/>

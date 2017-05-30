@@ -45,18 +45,49 @@ For ease of testing, several parameters can be set in the query string:
 }
 
 
+.wc-chatview-video {
+    position: relative;
+    width: 100%;
+    height: 90%;
+    //padding: 20px;
+    border-radius: 5px;
+    background-attachment: scroll;
+    overflow: hidden;
+}
+.wc-chatview-video video {
+    min-width: 100%;
+    min-height: 100%;
+    /* position: relative; */
+    position: absolute;
+    z-index: 1;
+    object-fit: cover;
+    top: -40%;
+left: 50%;
+transform: translate(-50%, 0%) scale(0.5, 0.5);
+}
+.wc-chatview-video .overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    /* background: green; */
+    opacity: 0.5;
+}
+
 body {
     margin:0;
 }
 
 @font-face {
     font-family: OpenSanslLight;
-    src: url(font/OpenSans-Light.ttf);
+    src: url("font/OpenSans-Light.ttf");
 }
 
 @font-face {
     font-family: BebasNeue;
-    src: url(font/BebasNeue Book.otf);
+    src: url("font/BebasNeue Book.otf");
 }
 
 #container {
@@ -92,13 +123,13 @@ input[type=text]{
 input:focus {
     outline:none;
 }
-.button {
-    position:relative;
+.wc-send {
+/*     position:relative;
     left:20px;
-    top:4px;
+    top:4px; */
     font-family: BebasNeue;
-    font-weight: 100;
-    font-size: 25px;
+    /* font-weight: 100;
+    font-size: 25px; */
     color:#0A1A54;
     text-transform: uppercase;
     display:inline-block;
@@ -182,7 +213,7 @@ input[placeholder], [placeholder], *[placeholder] {
 
 
             /* lista eventi
-            * apertura della pagina -> paertura tendna e primo video
+            * apertura della pagina -> apertura tendina e primo video
             * AvatarReminder -> quell'immagine col video annesso
             * AvatarPresentation -> apre tendona e avvia video
 

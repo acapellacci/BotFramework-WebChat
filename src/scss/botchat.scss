@@ -15,7 +15,7 @@ $actionTransition: .2s cubic-bezier(0,0,.5,1);
 /* reset */
 
     body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
-        font-family: 'Segoe UI', sans-serif;
+        // font-family: 'Segoe UI', sans-serif;
         font-size: 15px;
     }
 
@@ -197,7 +197,7 @@ $actionTransition: .2s cubic-bezier(0,0,.5,1);
 
     .wc-chatview-video {
         height: 0;
-        background: blue ;
+        // background: blue ;
         animation-name: wc-chatview-video-animation;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
@@ -255,6 +255,7 @@ $actionTransition: .2s cubic-bezier(0,0,.5,1);
         box-shadow: 0px 1px 1px 0px $c_shadow;
         padding: 8px;
         word-break: break-word;
+        font-family: OpenSanslLight;
       }
 
     .wc-message-content.clickable {
@@ -612,7 +613,7 @@ $actionTransition: .2s cubic-bezier(0,0,.5,1);
 /* console */
 /*.wc-console-interior {
     border-radius: 15px;
-        border: 5px solid #dbdee1;
+        border: 5px solid $c10;
     bottom: 0;
     box-sizing: border-box;
     height: 50px;
@@ -632,7 +633,7 @@ $actionTransition: .2s cubic-bezier(0,0,.5,1);
         cursor: pointer;
         display: inline-block;
         height: 40px;
-        background: #dbdee1;
+        background: $c10;
     }
 
     .wc-console /*.wc-console-interior*/ p {
@@ -642,13 +643,15 @@ $actionTransition: .2s cubic-bezier(0,0,.5,1);
     }
 
     .wc-console textarea, .wc-console input[type=text] {
-        border: 1px solid #eceff1;
+        border: 1px solid $c09;
         border-radius: 7px;
         height: 100%;
         outline: none;
         padding: 0;
         resize: none;
         width: 100%;
+        font-family: OpenSanslLight;
+        color:#454545;
 
 
     }
