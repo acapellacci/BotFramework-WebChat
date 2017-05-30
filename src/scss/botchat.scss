@@ -190,7 +190,8 @@ $actionTransition: .2s cubic-bezier(0,0,.5,1);
         overflow: hidden;
         position: absolute;
         right: 0;
-        left: 0;
+        // left: 0;
+        left: 10px;
         top: 0;
         bottom: 0;
     }
